@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { setage } from '../slices/age';
 import { useDispatch } from 'react-redux';
+import { FaAngleDown } from "react-icons/fa6";
+
 
 const DropDown = (props) => {
   
@@ -18,17 +20,18 @@ const DropDown = (props) => {
 
     const agehandler = (i)=>{
         dispatch(setage(i));
+        setselected("null")
         props.actions.sayAge(i);
     }
 
     return (
     <div>
       {
-        selected ? (<div onClick={clickHandler}>Select Age</div>) : (<div>
+        selected === "null" ? <div></div> : selected  ? (<div onClick={clickHandler} className='button wide'>Select Age <FaAngleDown></FaAngleDown></div>) : (<div className='select-con'>
             {
                 arr.map((i)=>{
                     return (
-                        <div onClick={()=> {agehandler(i)}}>{i}</div>
+                        <div onClick={()=> {agehandler(i)}} className='select'>{i}</div>
                     )
                 })
             }

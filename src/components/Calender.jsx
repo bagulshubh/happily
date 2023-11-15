@@ -17,16 +17,19 @@ const Calender = (props) => {
 
     const clickHandler1 = ()=>{
       dispatch(setsession("Morning"));
+      setvariable("null")
       props.actions.displayTime("Morning");
     }
       
     const clickHandler2 = ()=>{
       dispatch(setsession("AfterNoon"));
+      setvariable("null")
       props.actions.displayTime("AfterNoon");
     }
 
     const clickHandler3 = ()=>{
       dispatch(setsession("Evening"));
+      setvariable("null")
       props.actions.displayTime("Evening");
     }
 
@@ -34,7 +37,7 @@ const Calender = (props) => {
     <div>
       <div className='calendar-container'>
       {
-        variable ? (<div className='time-slot-con'>
+        variable === "null" ? <div></div> : variable ? (<div className='time-slot-con'>
           <div className='timeslot' onClick={clickHandler1}>Morning</div>
           <div className='timeslot' onClick={clickHandler2}>AfterNoon</div>
           <div className='timeslot' onClick={clickHandler3}>Evening</div>

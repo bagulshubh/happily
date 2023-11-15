@@ -21,6 +21,28 @@
   width: 30%;
   margin: 0 auto;
 }
+.wide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw2;
+  width: 100%;
+}
+.select-con{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.select{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(206, 206, 206);
+  width: 100%;
+  cursor: pointer;
+}
 .react-calendar { 
   width: 400px;
   max-width: 100%;

@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { createClientMessage } from 'react-chatbot-kit'
 import ActionProvider from '../ChatBot/ActionProvider'
 
 const ButtonCom = (props) => {
 
+  const [state,setstate] = useState(true);
+
+  const clickHandler = ()=>{
+    setstate(false);
+    props.actions.handlegotit();
+  }
 
   return (
-    <div onClick={props.actions.handlegotit} className='button'>
-      Got It
+    <div >
+    {
+      state ? <div onClick={clickHandler} className='button'>Got It</div> : <div></div>
+    }
     </div>
   )
 }
