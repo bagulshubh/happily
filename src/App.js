@@ -5,7 +5,7 @@ import Home from './components/Home';
 import ChatbotCom from './components/ChatbotCom';
 import Info from './components/Info';
 import 'react-chatbot-kit/build/main.css'
-import Calendar from 'react-calendar';
+
 
 function App() {
   return (
@@ -20,8 +20,6 @@ function App() {
         <Route path='/info' element={<Info></Info>}></Route>
 
       </Routes>
-
-     
 
     </div>
   );

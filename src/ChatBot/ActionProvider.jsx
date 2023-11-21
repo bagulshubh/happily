@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router';
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
 
     const {date} = useSelector((state)=>(state.date));
-    const {session} = useSelector((state)=>(state.date));
+
     const navigate = useNavigate();
 
     const handlegotit = ()=>{
@@ -94,7 +94,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
             
             navigate("/info");
           }
-        }, 1000); // The interval is set to 1000 milliseconds (1 second)
+        }, 1000); 
         
     }
 
